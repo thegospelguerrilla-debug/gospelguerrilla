@@ -1,26 +1,298 @@
 @import "tailwindcss";
 
+/* ============================================
+   GOSPELGUERRILLA — DESIGN SYSTEM
+   Dark, gritty, high-contrast, street-level
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette */
+  --bg: #0a0a0a;
+  --bg-elevated: #111111;
+  --bg-card: #1a1a1a;
+  --border: #2a2a2a;
+
+  /* Accent — the signature red */
+  --accent: #FF5A6D;
+  --accent-hover: #ff3d52;
+  --accent-light: #ff7a88;
+
+  /* Text */
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --text-subtle: #737373;
+
+  /* Utility */
+  --success: #22c55e;
+  --error: #ef4444;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets + gritty feel */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-feature-settings: "tnum" 1;
+}
+
+/* Strong, bold typography for impact */
+h1, h2, h3, h4 {
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+/* High-contrast links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ============================================
+   BUTTONS — Big, street, no rounded fluff
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.875rem 2rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text);
+  border-color: transparent;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.btn-ghost:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ============================================
+   CARDS & SECTIONS
+   ============================================ */
+.gritty-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.75rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gritty-card {
+    padding: 2.25rem;
+  }
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* ============================================
+   MOBILE MENU (pure CSS + state driven)
+   ============================================ */
+.mobile-menu {
+  transition: transform 0.2s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.15s ease;
+}
+
+.mobile-menu.closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ============================================
+   FORMS — Clean, high contrast, big targets
+   ============================================ */
+input, textarea, select {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.1s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 90, 109, 0.15);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.375rem;
+}
+
+/* Honeypot */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Form success state */
+.form-success {
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+.headline {
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.subhead {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Scripture / verse callouts */
+.verse {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+/* ============================================
+   MISC GRITTY TOUCHES
+   ============================================ */
+.red-accent {
+  color: var(--accent);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+/* Make sure images don't get too bright */
+img {
+  filter: contrast(1.05) saturate(0.95);
+}
+
+/* Accessibility — visible focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ============================================
+   GRAFFITI TAG / SIGNATURE STYLE
+   Reusable for tagging the site, logos, etc.
+   Looks like hand-sprayed street tag directly on the page.
+   ============================================ */
+.graffiti-tag {
+  font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 0.78;
+  color: #fff;
+  -webkit-text-stroke: 3px #000;
+  text-shadow: 
+    4px 4px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px #ff5a6d,
+    3px 6px 0 #cc0000,
+    5px 10px 0 #990000,
+    7px 14px 0 #660000;
+  display: inline-block;
+  user-select: none;
+  position: relative;
+}
+
+/* Extra drip and tag effect for signature look */
+.graffiti-tag::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(to right, #ff5a6d, #cc0000);
+  transform: skewX(-15deg);
+  box-shadow: 0 2px 0 #000;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }

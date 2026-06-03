@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GospelGuerrilla
+
+**Raw. Real. Urgent. No church fluff.**
+
+A bold, street-style evangelistic website built to clearly present the Gospel to skeptics, broken people, and everyday unbelievers.
+
+## Tech
+
+- Next.js 15 (App Router)
+- TypeScript + Tailwind CSS
+- Formspree for forms (no backend)
+- Fully mobile-first, dark gritty aesthetic with bold red accents (`#FF5A6D`)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Formspree Setup (Required for forms to work)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Go to [formspree.io](https://formspree.io) and create a free account.
+2. Create **two forms**:
+   - One called **"Prayer Requests"**
+   - One called **"Reach Out / Questions"**
+3. For each form, copy the form ID (the part after `/f/` in the endpoint URL).
+4. Copy `.env.local.example` → `.env.local` and fill in the IDs:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_FORMSPREE_PRAYER=abc123xyz
+NEXT_PUBLIC_FORMSPREE_CONTACT=def456uvw
+```
 
-## Learn More
+5. Restart your dev server.
 
-To learn more about Next.js, take a look at the following resources:
+The forms now work and submissions will land in your Formspree inbox.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+  layout.tsx          # Root layout + Navbar + Footer + SEO
+  page.tsx            # Homepage (the hard-hitting Gospel presentation)
+  prayer/page.tsx     # Prayer Requests form
+  reach/page.tsx      # Contact + FAQ
+  about/page.tsx      # Simple, authentic about page
+components/
+  CTAButton.tsx
+  Navbar.tsx          # Mobile hamburger included
+  Footer.tsx
+  GospelBlock.tsx     # Reusable clear Gospel presentation
+  PrayerForm.tsx
+  ContactForm.tsx
+  FAQ.tsx
+public/images/        # Three custom gritty evangelistic images
+lib/formspree.ts      # Optional helper
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy to **Vercel** (recommended — one click).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add the two `NEXT_PUBLIC_FORMSPREE_*` environment variables in your Vercel project settings.
+
+## Design Direction
+
+- Deep near-black backgrounds (`#0a0a0a`)
+- Bold red accent: `#FF5A6D`
+- Heavy typography, high contrast, sharp edges
+- Zero churchy language or polished religious aesthetic
+
+The goal is to feel like a street preacher who actually cares — urgent, honest, and hopeful at the same time.
+
+## License
+
+This is an evangelistic tool. Use it freely to point people to Jesus.
