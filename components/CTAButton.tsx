@@ -21,11 +21,12 @@ export default function CTAButton({
   type = 'button',
 }: CTAButtonProps) {
   const base = 'btn';
+  const variantStyle = variant || 'primary';
   const styles = {
     primary: 'btn-primary',
     secondary: 'btn-secondary',
     ghost: 'btn-ghost',
-  }[variant];
+  }[variantStyle];
 
   const combined = `${base} ${styles} ${className}`.trim();
 
