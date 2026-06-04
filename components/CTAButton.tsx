@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { ReactNode, MouseEventHandler } from 'react';
 
 type CTAButtonProps = {
   variant?: 'primary' | 'secondary' | 'ghost';
   href?: string;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLElement>;
   children: ReactNode;
   className?: string;
   type?: 'button' | 'submit';
