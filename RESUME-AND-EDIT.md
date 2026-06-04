@@ -64,3 +64,38 @@ Old share links you sent stay on the version they were created for. Generate a f
 - If you close the Grok window, just relaunch as above and use /load to continue this exact conversation history.
 
 If you tell me a specific edit ("change the 'THE TRUTH' section to say X instead of Y"), I will make the change right away using the editor tools.
+
+## Restarting your computer
+Yes, it's completely fine to restart. All your code is on disk in ~/Desktop/gospelguerrilla, and Grok sessions are saved in ~/.grok/sessions/. After restart:
+- Open Terminal
+- cd ~/Desktop/gospelguerrilla
+- ./resume-grok   (or the full grok path)
+- Use /load if needed to pick this conversation.
+
+## Websites and services we've been using
+- **Vercel** (hosting + deploys): 
+  - Dashboard: https://vercel.com (log in with your account)
+  - Your project: https://vercel.com/gospelguerrilla/gospelguerrilla
+  - Live site: https://gospelguerrilla.vercel.app
+  - Use this for: viewing deployments, build logs, Domains tab (to assign the main domain), Share button (to generate public links with tokens).
+
+- **Share links with tokens** (the _vercel_share=... ones):
+  - These are generated inside the Vercel dashboard (not a separate website).
+  - On a deployment's details page, click "Share" → "publicly accessible" → copy the link.
+  - The token lets people view that specific deployment without logging in.
+  - Example from history: https://gospelguerrilla.vercel.app?_vercel_share=...
+
+- **GitHub** (code repo, connected to Vercel):
+  - https://github.com/thegospelguerrilla-debug/gospelguerrilla
+  - We push code here sometimes; Vercel auto-deploys from it (or we use CLI).
+
+- **This Grok conversation**:
+  - Launched via the grok CLI tool (the window you're in now).
+  - Not a website, but the tool at /Users/jamieguthrie/.grok/bin/grok
+
+## Quick deploy after changes
+After editing (I do the code edits), test locally then:
+cd ~/Desktop/gospelguerrilla
+npx vercel --prod
+
+This updates the live site and gives you a new preview URL.
