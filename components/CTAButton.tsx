@@ -10,6 +10,7 @@ type CTAButtonProps = {
   children: ReactNode;
   className?: string;
   type?: 'button' | 'submit';
+  disabled?: boolean;
 };
 
 export default function CTAButton({
@@ -19,6 +20,7 @@ export default function CTAButton({
   children,
   className = '',
   type = 'button',
+  disabled = false,
 }: CTAButtonProps) {
   const base = 'btn';
   const variantStyle = variant || 'primary';
@@ -39,7 +41,7 @@ export default function CTAButton({
   }
 
   return (
-    <button type={type} onClick={onClick} className={combined}>
+    <button type={type} onClick={onClick} className={combined} disabled={disabled}>
       {children}
     </button>
   );
