@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'The streets don’t lie. Neither does God. Clear, urgent, gritty presentation of the Gospel with no performance and no religious games.',
     images: [
       {
-        url: '/images/street-repent.jpg',
+        url: '/images/guerrilla-street.jpg',
         width: 1200,
         height: 630,
         alt: 'GospelGuerrilla - The raw Gospel on the streets',
