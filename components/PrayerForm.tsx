@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import CTAButton from './CTAButton';
 
 export default function PrayerForm() {
@@ -9,7 +9,7 @@ export default function PrayerForm() {
 
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_PRAYER;
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('loading');
     setErrorMsg('');
