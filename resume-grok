@@ -1,0 +1,9 @@
+#!/bin/zsh
+# Helper to quickly resume this Grok conversation for the GospelGuerrilla project.
+# Usage: after cd ~/Desktop/gospelguerrilla, just run ./resume-grok
+
+echo "Resuming Grok session for gospelguerrilla..."
+echo "If this is your first time, on the welcome screen select the recent session for this folder."
+echo "Or inside Grok type: /load"
+
+/Users/jamieguthrie/.grok/bin/grok -r
