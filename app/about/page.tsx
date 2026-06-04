@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import CTAButton from '../../components/CTAButton';
 
 export const metadata = {
