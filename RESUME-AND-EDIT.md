@@ -1,6 +1,16 @@
 # Resuming this Grok conversation and editing the GospelGuerrilla site
 
-## How to get back to this chat / Grok session
+**Easiest way to resume this exact conversation:**
+
+1. Open Terminal
+2. Run: `cd ~/Desktop/gospelguerrilla`
+3. Run: `./resume-grok`
+
+This will launch Grok and automatically try to resume the most recent session for this project (using the `-r` flag). On the welcome screen you can also pick previous sessions for this folder if needed.
+
+(If `./resume-grok` doesn't work, fall back to the full path below.)
+
+## Alternative / manual steps
 
 1. Open your terminal.
 2. `cd ~/Desktop/gospelguerrilla`
@@ -12,6 +22,8 @@
 Sessions are saved automatically in `~/.grok/sessions/`.
 
 You can also run `grok sessions` to list them.
+
+## How to edit the site (I will do the code changes for you)
 
 ## How to edit the site (I will do the code changes for you)
 
