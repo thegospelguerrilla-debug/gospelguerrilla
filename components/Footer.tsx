@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { Instagram } from 'lucide-react';
+
+const INSTAGRAM_URL = 'https://www.instagram.com/thegospelguerrilla/';
 
 export default function Footer() {
   return (
@@ -10,9 +13,19 @@ export default function Footer() {
             <div className="w-5 h-5 bg-[#FF5A6D]" />
             <span className="font-black tracking-[-1px] text-lg">GOSPELGUERRILLA</span>
           </div>
-          <p className="text-[#a3a3a3] max-w-[240px]">
+          <p className="text-[#a3a3a3] max-w-[240px] mb-4">
             Raw Gospel. No performance. No fluff.<br />For the broken and the skeptic.
           </p>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[#a3a3a3] hover:text-[#FF5A6D] transition-colors"
+            aria-label="Follow GospelGuerrilla on Instagram"
+          >
+            <Instagram size={18} strokeWidth={2.25} />
+            <span>@thegospelguerrilla</span>
+          </a>
         </div>
 
         {/* Quick Links */}

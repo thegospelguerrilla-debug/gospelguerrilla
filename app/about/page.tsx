@@ -73,6 +73,24 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section border-y border-[#2a2a2a]">
+        <div className="max-w-3xl mx-auto px-5 text-center">
+          <div className="text-[#FF5A6D] text-sm font-black tracking-[2px] mb-3">ON THE STREETS</div>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">Follow the mission on Instagram</h2>
+          <p className="text-[#a3a3a3] mb-8 max-w-xl mx-auto">
+            Same raw Gospel. No performance. Short posts, reels, and truth for the broken and the skeptic.
+          </p>
+          <a
+            href="https://www.instagram.com/thegospelguerrilla/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary text-base"
+          >
+            @thegospelguerrilla
+          </a>
+        </div>
+      </section>
+
       <section className="section bg-[#111111] border-t border-[#2a2a2a]">
         <div className="max-w-3xl mx-auto px-5">
           <h3 className="text-[#FF5A6D] text-3xl font-black tracking-tight mb-8 text-center">WHAT WE ACTUALLY BELIEVE</h3>
