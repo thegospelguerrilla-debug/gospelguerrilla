@@ -15,7 +15,7 @@ export default function AboutPage() {
 
           <div className="text-xl leading-relaxed text-[#d1d1d1] max-w-2xl mx-auto space-y-6">
             <p>We’re not a big organization. We’re just a handful of people who were dead in our sin, met Jesus, and can’t shut up about it.</p>
-            <p>No fancy titles. No religious empire. No performance. Just the Gospel, raw and unfiltered, for the people the polished churches often miss.</p>
+            <p>No fancy titles. No religious empire. No performance. Just the Truth of Jesus.</p>
           </div>
         </div>
       </section>
@@ -40,10 +40,10 @@ export default function AboutPage() {
           <div className="bg-black">
             <h2 className="text-4xl font-black tracking-tight mb-6">Why “Guerrilla”?</h2>
             <div className="space-y-4 text-lg text-[#c1c1c1]">
-              <p>Because we go where the religious people often won’t.</p>
-              <p>Because we say the things nice churches avoid.</p>
-              <p>Because the Gospel was never meant to stay inside stained-glass buildings.</p>
-              <p>It belongs on the streets, in the alleys, in the middle of the mess.</p>
+              <p>Because we go where religion often won&apos;t.</p>
+              <p>Because we speak the truth that people avoid.</p>
+              <p>Because the Gospel was never meant to be a secret only talked about behind stained-glass windows.</p>
+              <p>The Gospel belongs in the dark places where hope is hard to find.</p>
             </div>
           </div>
 
@@ -62,10 +62,10 @@ export default function AboutPage() {
         <h2 className="text-3xl font-black mb-8 text-center tracking-tight">Our Only Message</h2>
         <div className="gritty-card text-xl leading-relaxed">
           <p className="mb-6">
-            You have sinned against a holy God. The penalty is death and eternal separation from Him.
+            We have sinned against a Holy God. The penalty is death and eternal separation from Him.
           </p>
           <p className="mb-6">
-            Jesus Christ, fully God and fully man, lived the perfect life you couldn’t live, died the death you deserve, and rose from the dead on the third day.
+            Jesus Christ, fully God and fully man, lived the perfect life we couldn&apos;t live, died the death we deserve, and rose from the dead on the third day.
           </p>
           <p className="font-semibold text-[#FF5A6D]">
             The only way to be saved is to turn from your sin and trust Jesus alone. Not religion. Not trying harder. Jesus.

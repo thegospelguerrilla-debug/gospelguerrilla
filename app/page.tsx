@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE TRUTH • THE WAY • THE LIGHT */}
+      {/* THE WAY • THE TRUTH • THE LIFE */}
       <section id="gospel" className="section max-w-5xl mx-auto px-5">
         <div className="text-center mb-10">
           <div className="inline-block px-4 py-1 bg-[#FF5A6D] text-[#0a0a0a] text-xs font-black tracking-[2px] mb-4">
@@ -39,6 +39,20 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* The Way */}
+          <div className="gritty-card">
+            <h3 className="text-[#FF5A6D] font-black text-2xl mb-4 tracking-tight">THE WAY</h3>
+            <div className="space-y-4 text-[15px] leading-relaxed text-[#d1d1d1]">
+              <p>We all know what it&apos;s like to be lost.</p>
+              <p>We&apos;ve tried our own way. We&apos;ve chased success, pleasure, relationships, money, and self-improvement, yet our hearts still carry guilt, shame, and emptiness.</p>
+              <p>The Bible says that sin separates us from God.</p>
+              <p>No amount of good works can bridge that gap.</p>
+            </div>
+            <div className="verse mt-6">
+              “Jesus said to him, ‘I am the way, and the truth, and the life. No one comes to the Father except through me.’” — John 14:6
+            </div>
+          </div>
+
           {/* The Truth */}
           <div className="gritty-card">
             <h3 className="text-[#FF5A6D] font-black text-2xl mb-4 tracking-tight">THE TRUTH</h3>
@@ -47,28 +61,16 @@ export default function Home() {
               <p>We have all lived our own way. We have lied, hated, lusted, and stolen the glory that belongs to Him alone.</p>
             </div>
             <div className="verse mt-6">
-              “For all have sinned and fall short of the glory of God.” — Romans 3:23
-            </div>
-          </div>
-
-          {/* The Way */}
-          <div className="gritty-card">
-            <h3 className="text-[#FF5A6D] font-black text-2xl mb-4 tracking-tight">THE WAY</h3>
-            <div className="space-y-4 text-[15px] leading-relaxed text-[#d1d1d1]">
-              <p>Jesus lived a perfect life and came to the earth to show us the way.</p>
-              <p>He stepped straight into the darkness — into the pain, the addiction, the shame, the places where people had given up hope. He reached the broken ones who thought they were too far gone.</p>
-            </div>
-            <div className="verse mt-6">
               “For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.” — Romans 6:23
             </div>
           </div>
 
-          {/* The Light */}
+          {/* The Life */}
           <div className="gritty-card border-[#FF5A6D]/40">
-            <h3 className="text-[#FF5A6D] font-black text-2xl mb-4 tracking-tight">THE LIGHT</h3>
+            <h3 className="text-[#FF5A6D] font-black text-2xl mb-4 tracking-tight">THE LIFE</h3>
             <div className="space-y-4 text-[15px] leading-relaxed">
               <p>Through the sacrifice of Jesus we can be saved if we put our faith in Him.</p>
-              <p>He took the punishment we deserved on the cross. He rose from the dead. In Him we have light, forgiveness, and eternal life.</p>
+              <p>He took the punishment we deserved on the cross. He rose from the dead. In Him we have life, forgiveness, and eternal life.</p>
             </div>
             <div className="verse mt-6">
               “For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.” — John 3:16
@@ -88,7 +90,7 @@ export default function Home() {
             <div className="inline-block px-4 py-1 bg-[#FF5A6D] text-[#0a0a0a] text-xs font-black tracking-[2px] mb-4">
               IF YOU KNOW YOU NEED THIS
             </div>
-            <h2 className="headline text-5xl md:text-6xl tracking-[-2px]">THERE IS ONLY ONE WAY OUT.</h2>
+            <h2 className="headline text-5xl md:text-6xl tracking-[-2px]">THERE&apos;S A WAY OUT AND HIS NAME IS JESUS</h2>
           </div>
 
           <div className="gritty-card mb-8">
