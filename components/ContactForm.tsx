@@ -102,6 +102,8 @@ export default function ContactForm() {
         I want someone to personally follow up with me (email or message).
       </label>
 
+      <input type="hidden" name="_subject" value="Reach Out / Questions — GospelGuerrilla" />
+
       {/* Honeypot */}
       <input type="text" name="website" className="hp" tabIndex={-1} autoComplete="off" />
 

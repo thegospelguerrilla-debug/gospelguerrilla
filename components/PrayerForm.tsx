@@ -91,6 +91,8 @@ export default function PrayerForm() {
         </select>
       </div>
 
+      <input type="hidden" name="_subject" value="Prayer Request — GospelGuerrilla" />
+
       {/* Honeypot */}
       <input type="text" name="website" className="hp" tabIndex={-1} autoComplete="off" />
 
