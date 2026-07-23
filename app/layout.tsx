@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gospelguerrilla.com'),
   title: {
     default: 'GospelGuerrilla | The Raw Gospel for Real People',
     template: '%s | GospelGuerrilla',
@@ -17,6 +18,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
+    url: 'https://gospelguerrilla.com',
+    siteName: 'GospelGuerrilla',
     title: 'GospelGuerrilla | The Raw Gospel for Real People',
     description:
       'The streets don’t lie. Neither does God. Clear, urgent, gritty presentation of the Gospel with no performance and no religious games.',
